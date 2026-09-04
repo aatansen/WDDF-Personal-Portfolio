@@ -1,0 +1,254 @@
+/* =========================================================
+   Personal Portfolio - Custom Styles
+   Bootstrap 5 is used for layout and responsive components.
+   ========================================================= */
+
+:root {
+    --primary: #0d6efd;
+    --dark: #101828;
+    --muted: #667085;
+    --light-bg: #f8fafc;
+    --border: #e4e7ec;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    line-height: 1.7;
+    background: #ffffff;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.navbar .nav-link {
+    font-weight: 600;
+    margin-left: .35rem;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: var(--primary);
+}
+
+.hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(13, 110, 253, .15), transparent 30%),
+        linear-gradient(135deg, #f8fbff, #eef5ff);
+}
+
+.hero-title {
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    color: var(--muted);
+    font-size: 1.1rem;
+    max-width: 650px;
+}
+
+.hero-photo {
+    width: min(390px, 80vw);
+    height: min(390px, 80vw);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 12px solid #ffffff;
+    box-shadow: 0 25px 60px rgba(16, 24, 40, .15);
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.page-header {
+    padding: 90px 0;
+    background: linear-gradient(135deg, #0d6efd, #084298);
+    color: #fff;
+}
+
+.section-title {
+    font-weight: 800;
+    margin-bottom: .75rem;
+}
+
+.section-lead {
+    color: var(--muted);
+    max-width: 700px;
+}
+
+.info-card,
+.service-card,
+.project-card,
+.skill-card,
+.client-card,
+.timeline-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(16, 24, 40, .05);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.info-card:hover,
+.service-card:hover,
+.project-card:hover,
+.skill-card:hover,
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(16, 24, 40, .10);
+}
+
+.icon-box {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #eaf2ff;
+    color: var(--primary);
+    font-size: 1.35rem;
+}
+
+.stat-box {
+    padding: 24px;
+    text-align: center;
+    border-radius: 15px;
+    background: var(--light-bg);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.skill-progress {
+    height: 10px;
+    border-radius: 50px;
+}
+
+.project-image {
+    height: 210px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+
+.service-card {
+    height: 100%;
+    padding: 30px;
+}
+
+.client-logo {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #eef4ff;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.timeline {
+    position: relative;
+    border-left: 3px solid #dbeafe;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -41px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #bfdbfe;
+}
+
+.badge-soft {
+    background: #eaf2ff;
+    color: #084298;
+}
+
+.contact-card {
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 30px;
+    height: 100%;
+}
+
+.form-control,
+.form-select {
+    padding: .75rem 1rem;
+    border-radius: 10px;
+}
+
+.map-frame {
+    width: 100%;
+    min-height: 360px;
+    border: 0;
+    border-radius: 16px;
+}
+
+footer {
+    background: #101828;
+    color: #d0d5dd;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #9ec5fe;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .hero-photo {
+        margin-top: 40px;
+    }
+
+    .page-header {
+        padding: 65px 0;
+    }
+}
